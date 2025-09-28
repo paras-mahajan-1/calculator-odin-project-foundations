@@ -1,5 +1,13 @@
 console.log("It's working");
 
+function operate(firstValue, secondValue, operator) {
+    if (operator === "+" ) return firstValue + secondValue;
+    if (operator === "-" ) return firstValue - secondValue;
+    if (operator === "*" ) return firstValue * secondValue;
+    if (operator === "/" ) return firstValue / secondValue;
+
+}
+
 function calculator() {
     let counterVar = 0;
     let resultant;
@@ -12,20 +20,8 @@ function calculator() {
 
     let getOperator = prompt("Enter the operator");
     let getSecondInput = +prompt("Enter the next number");
-    
+    resultant = operate(resultant, getSecondInput, getOperator);
 
-    if (getOperator === "+") {
-        resultant = resultant + getSecondInput;
-    };
-    if (getOperator === "-") {
-        resultant = resultant - getSecondInput;
-    };
-    if (getOperator === "*") {
-        resultant = resultant * getSecondInput;
-    };
-    if (getOperator === "/") {
-        resultant = resultant / getSecondInput;
-    };
     if ((getOperator == "=") || (getSecondInput == "=")){
         console.log(holding);
         break;
