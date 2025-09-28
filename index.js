@@ -9,12 +9,9 @@ function operate(firstValue, secondValue, operator) {
 }
 
 function calculator() {
-    let counterVar = 0;
     let resultant;
-    if (counterVar == 0) {
         let getInput = +prompt("Enter the first number");
         resultant = getInput;
-    };
     let holding;
     while (true) {
 
@@ -30,12 +27,15 @@ function calculator() {
 }   
 };
 
-// calculator();
+calculator();
 
+// var value;
 
+// window.addEventListener("click", )
 
+// function eventFunction (event) {
 
-
+// }
 
 
 
