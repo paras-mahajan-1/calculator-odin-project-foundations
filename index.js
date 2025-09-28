@@ -23,7 +23,6 @@ function calculator() {
     resultant = operate(resultant, getSecondInput, getOperator);
 
     if ((getOperator == "=") || (getSecondInput == "=")){
-        console.log(holding);
         break;
     }
     holding = resultant;
@@ -31,7 +30,7 @@ function calculator() {
 }   
 };
 
-calculator();
+// calculator();
 
 
 

@@ -1,3 +1,24 @@
 /* body{
     background-color: black;
 } */
+body{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+button {
+    height: 50px;
+    width: 50px;
+}
+div .screen {
+    height: 50px;
+    width: 210px;
+    background-color: beige;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
