@@ -13,7 +13,7 @@ function multiply (value1, value2) {
 };
 
 function divide (value1, value2) {
-    if (value2 == 0) {screen.textContent = Error("please enter correct value") }
+    if (value2 == 0) {screen.textContent = Error("please enter correct value");}
     return value1/value2;
 };
 
@@ -39,7 +39,15 @@ function numberTester(value) {
         return true;
     }
 }
-console.log(numberTester("0clear"))
+function removingLastValue(string) {
+    let stringArr = string.split("");
+    if (!stringArr) return 0;
+    let len = string.length;
+    stringArr.length = len - 1;
+    return stringArr.join("")
+};
+// console.log(removingLastValue("1234"));
+
 window.addEventListener("click", event => {
     let holding = 0;
     let targetValue = event.target.closest("button");
@@ -54,34 +62,14 @@ window.addEventListener("click", event => {
         operator = "";
         screen.textContent = holding;
     }
-    else if ((!number1) && !operator) {if (((operator == "+" ) || (operator == "-" ) || (operator == "*" ) || (operator == "/" ))) {number1 = 1}; holdingFirstValue += targetValue.textContent; number1 = 0; screen.textContent = holdingFirstValue; if (holdingFirstValue.includes("clear")) {holdingFirstValue = 0}} 
+    else if ((!number1) && !operator) {if (((operator == "+" ) || (operator == "-" ) || (operator == "*" ) || (operator == "/" ))) {number1 = 1}; holdingFirstValue += targetValue.textContent; number1 = 0; screen.textContent = holdingFirstValue; if (holdingFirstValue.includes("clear")) {holdingFirstValue = 0}
+    
+} 
     else if (!number2) {holdingSecondValue += targetValue.textContent; number2 = 0; 
         screen.textContent = holdingSecondValue;
-        // if ((targetValue.textContent == "=" ) ) {
-        // ((holdingFirstValue) && (holdingSecondValue) && (operator)) {
-        // holding = operate(+holdingFirstValue, +holdingSecondValue, operator);
-        // holdingFirstValue = holding;
-        // holdingSecondValue = 0;
-        // operator = "";
-        // screen.textContent = holding
-    // } else if (targetValue.textContent != "="){
-    //     number2 = 1
-    // }
     }
     else if (targetValue.textContent == "clear") {holdingFirstValue = 0; holdingSecondValue = 0; operator = ""}
-    // else if ((holdingFirstValue) && (holdingSecondValue) && (operator)) {
-    //     holding = operate(+holdingFirstValue, +holdingSecondValue, operator);
-    //     holdingFirstValue = holding;
-    //     holdingSecondValue = 0;
-    //     operator = "";
-    //     screen.textContent = holding;
-    // };
-    // screen.textContent = targetValue.textContent
-    // console.log(holdingFirstValue);
-    // console.log(holdingSecondValue);
-    // console.log(operator);
-    // console.log(holding);
-    // console.log(targetValue)
+
 });
 
 
